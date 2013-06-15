@@ -1,6 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 return array(
+	// The directory inside the application directory that contains the media files
+	'app_dir' => 'media',
 	// The public accessible directory where the file will be copied
 	'public_dir' => DOCROOT.'media/<uid>/kohana/<filepath>',
 	// Write the files to the public directory when in production

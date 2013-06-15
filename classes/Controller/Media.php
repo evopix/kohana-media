@@ -16,7 +16,7 @@ class Controller_Media extends Controller {
 		$filepath = $this->request->param('filepath');
 		$uid = $this->request->param('uid');
 
-		$cfs_file = Kohana::find_file('media', $filepath, FALSE);
+		$cfs_file = Kohana::find_file($this->config->app_dir, $filepath, FALSE);
 
 		if ( ! $cfs_file)
 			throw HTTP_Exception::factory(404);
